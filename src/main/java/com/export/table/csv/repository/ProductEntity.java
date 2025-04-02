@@ -1,2 +1,4 @@
-package com.export.table.csv.repository;public class ProductEntity {
+package com.export.table.csv.repository;
+
+public class ProductEntity {
 }

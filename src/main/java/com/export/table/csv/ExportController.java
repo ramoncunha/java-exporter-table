@@ -28,9 +28,8 @@ public class ExportController {
         String jobId = UUID.randomUUID().toString();
 
         // Iniciar a exportação de forma assíncrona
-        CompletableFuture.runAsync(() -> exportService.exportTablesToS3(jobId, request.getTables()));
+        CompletableFuture.runAsync(() -> exportService.exportTablesToS3(jobId));
 
-        return ResponseEntity.accepted()
-                .body(new ExportResponse(jobId, "Exportação iniciada com sucesso", request.getTables()));
+        return ResponseEntity.accepted().body(new ExportResponse(jobId, "Exportação iniciada com sucesso"));
     }
 }

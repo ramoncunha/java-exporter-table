@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: postgres-to-s3-exporter
+  main:
+    banner-mode: off
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+# Configuração do PostgreSQL
+jdbc:
+  url: jdbc:postgresql://localhost:5432/seu_banco
+  username: seu_usuario
+  password: sua_senha
+
+# Configuração do AWS S3
+s3:
+  region: us-east-1
+  bucket: seu-bucket-s3
+  prefix: exports/
+
+# Configuração de logging
+logging:
+  level:
+    root: INFO
+    com.example.dataexport: DEBUG
+    org.springframework: WARN

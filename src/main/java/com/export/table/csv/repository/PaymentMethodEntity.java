@@ -1,2 +1,4 @@
-package com.export.table.csv.repository;public class PaymentMethodEntity {
+package com.export.table.csv.repository;
+
+public class PaymentMethodEntity {
 }
